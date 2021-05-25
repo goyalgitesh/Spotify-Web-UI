@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spotify_ui/data/data.dart';
 import 'package:flutter_spotify_ui/widgets/playlist_header.dart';
+import 'package:flutter_spotify_ui/widgets/widgets.dart';
 
 class PlaylistScreen extends StatefulWidget {
   final Playlist playlist;
@@ -123,6 +124,7 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
             ),
             children: [
               PlaylistHeader(playlist: widget.playlist),
+              TracksList(tracks: widget.playlist.songs)
             ],
           ),
         ),
